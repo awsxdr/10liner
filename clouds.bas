@@ -74,7 +74,7 @@ REM Draw shot
 PUT SPRITE 21, (G, H), 3
 
 REM Calculate next shot position
-H = ABS(H) - 10
+IF H >= 0 THEN H = H - 10
 
 REM Calculate joystick state and then handle
 S = ABS(STICK(0) + STRIG(0))
