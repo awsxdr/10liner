@@ -78,7 +78,7 @@ H = ABS(H) - 10
 
 REM Calculate joystick state and then handle
 S = ABS(STICK(0) + STRIG(0))
-IF S = 6 AND H < 0 THEN X = X - 2 : H = Z : G = X ELSE IF S > 5 THEN X = X - 4 ELSE IF S = 2 AND H < 0 THEN X = X + 2 : H = Z : G = X ELSE IF S > 1 THEN X = X + 4 ELSE IF S = 1 THEN H = Z : G = X
+IF S = 6 THEN X = X - 2 : H = Z : G = X ELSE IF S > 5 THEN X = X - 4 ELSE IF S = 2 THEN X = X + 2 : H = Z : G = X ELSE IF S > 1 THEN X = X + 4 ELSE IF S = 1 THEN H = Z : G = X
 
 REM Wrap player position between 20 and 220
 X = ((X + 180) MOD 200) + 20
