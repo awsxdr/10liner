@@ -61,7 +61,7 @@ FOR J = 1 TO 2
   Q = ABS(((U(J) + V(J) * EM) MOD D) - C) + 20
 
   REM Detect shot collision with enemy
-  IF Q < G AND G < Q + 8 AND V(J) - 8 < H AND H < V(J) + 8 THEN H = -1 : V(J) = -10 : N = N + 1 : ELSE IF V(J) > F THEN GOTO end
+  IF Q < G AND G < Q + 8 AND V(J) - 8 < H AND H < V(J) + 8 THEN H = -10 : V(J) = -10 : N = N + 1 : ELSE IF V(J) > F THEN GOTO end
 
   REM Draw enemy
   PUT SPRITE 30 + J - 1, (Q, V(J)), 8
