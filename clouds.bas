@@ -6,11 +6,6 @@ COLOR 15, 5, 15
 REM Initialize randomizer
 I = RND(-TIME)
 
-REM Clear lower tiles for scrolling
-FOR I = 0 TO 32 * 2
-  VPOKE BASE(5) + 32 * 24 + I, 0
-NEXT I
-
 DIM P$(2), U(2), V(2)
 
 REM Initialize enemy positions
