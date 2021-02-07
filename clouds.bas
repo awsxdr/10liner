@@ -57,7 +57,7 @@ REM Draw player
 PUT SPRITE 20, (X, Z), 12
 
 FOR J = 1 TO 2
-  REM Calculate enemy X position. This equation gives a triangle wave
+  REM Calculate enemy X position. This equation gives a triangle wave. Split when compressed but combined here
   Q = ABS(((U(J) + V(J) * EM) MOD D) - C) + 20
 
   REM Detect shot collision with enemy
